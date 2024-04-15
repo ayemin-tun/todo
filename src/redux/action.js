@@ -36,6 +36,6 @@ export const markAllCOmpleted = () => ({
 
 export const updateSearchTerm = (searchTerm) => ({
     type: UPDATA_SEARCH_TERM,
-    paylod: { searchTerm }
+    payload: { searchTerm }
 })
 

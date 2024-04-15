@@ -44,15 +44,17 @@ const todoReducer = (state = initialState, action) => {
                 filter: action.payload.filter,
                 searchTerm: state.searchTerm,
             }
+
         case UPDATA_SEARCH_TERM:
             return {
                 todos: state.todos,
                 filter: state.filter,
                 searchTerm: action.payload.searchTerm,
-            }
+            };
+
         case MARK_ALL_COMPLETED:
             return {
-                todos: state.filtertodos.map((todo) => ({ ...todo, completed: true })),
+                todos: state.todos.map((todo) => ({ ...todo, completed: true })),
                 filter: state.filter,
                 searchTerm: state.searchTerm
             }
